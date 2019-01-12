@@ -1,0 +1,12 @@
+{
+  "name": "cordova-plugin-colored-browser-tabs",
+  "version": "0.0.1",
+  "cordova": {
+    "id": "cordova-plugin-colored-browser-tabs",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "description": "Cordova Plugin to open Chrome Custom Tabs on Android or Safaris SFSafariViewController on iOS"
+}
