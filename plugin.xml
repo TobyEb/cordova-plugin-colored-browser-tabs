@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="cordova-plugin-colored-browser-tabs"
+        version="0.0.1">
+
+  <name>cordova-plugin-colored-browser-tabs</name>
+
+  <js-module src="www/ColoredBrowserTabs.js" name="ColoredBrowserTabs">
+    <clobbers target="ColoredBrowserTabs" />
+  </js-module>
+
+  <platform name="android">
+<framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="ColoredBrowserTabs">
+        <param name="android-package" value="com.tobyeb.coloredbrowsertabs.ColoredBrowserTabs"/>
+      </feature>
+    </config-file>
+
+    <!-- Java -->
+    <source-file src="src/android/src/com/tobyeb/coloredbrowsertabs/ColoredBrowserTabs.java" target-dir="src/com/tobyeb/coloredbrowsertabs"/>
+
+    <!-- Animations -->
+    <resource-file src="src/android/src/res/anim/fade_in.xml" target="res/anim/fade_in.xml" />
+    <resource-file src="src/android/src/res/anim/fade_out.xml" target="res/anim/fade_out.xml" />
+    <resource-file src="src/android/src/res/anim/slide_up.xml" target="res/anim/slide_up.xml" />
+    <resource-file src="src/android/src/res/anim/slide_down.xml" target="res/anim/slide_down.xml" />
+    <resource-file src="src/android/src/res/anim/slide_in_left.xml" target="res/anim/slide_in_left.xml" />
+    <resource-file src="src/android/src/res/anim/slide_in_right.xml" target="res/anim/slide_in_right.xml" />
+    <resource-file src="src/android/src/res/anim/slide_out_left.xml" target="res/anim/slide_out_left.xml" />
+    <resource-file src="src/android/src/res/anim/slide_out_right.xml" target="res/anim/slide_out_right.xml" />
+  </platform>
+
+</plugin>

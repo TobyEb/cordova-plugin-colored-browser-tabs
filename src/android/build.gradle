@@ -1,0 +1,12 @@
+apply plugin: 'com.android.application'
+
+// to avoid compilesdk errors
+android {
+    defaultConfig {
+        multiDexEnabled true
+    }
+}
+
+dependencies {
+    compile 'com.android.support:customtabs:27.1.1'
+}
