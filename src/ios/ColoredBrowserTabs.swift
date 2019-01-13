@@ -42,16 +42,18 @@ import SafariServices
         let tabColor: String? = parameters["tabColor"] as? String
         let animation: String? = parameters["animation"] as? String
         
-        let safariTab: SFSafariViewController? = createSafariViewController(url, tabColor)
-        if (safariTab != nil) {
-            if (animation ?? "").isEmpty {
-                self.viewController.present(safariTab!, animated: false)
-            } else {
-                self.viewController.present(safariTab!, animated: true)
+        if(!url.isEmpty) {
+            let safariTab: SFSafariViewController? = createSafariViewController(url, tabColor)
+            if (safariTab != nil) {
+                if (animation ?? "").isEmpty {
+                    self.viewController.present(safariTab!, animated: false)
+                } else {
+                    self.viewController.present(safariTab!, animated: true)
+                }
+                pluginResult = CDVPluginResult(
+                    status: CDVCommandStatus_OK
+                )
             }
-            pluginResult = CDVPluginResult(
-                status: CDVCommandStatus_OK
-            )
         }
         self.commandDelegate!.send(
             pluginResult,
@@ -105,10 +107,10 @@ import SafariServices
         Scanner(string: cString).scanHexInt32(&rgbValue)
         
         return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0)
+            red: CGFloat((rgbValue >> 16) & 0xFF) / 255.0,
+            green: CGFloat((rgbValue >> 8) & 0xFF) / 255.0,
+            blue: CGFloat(rgbValue & 0xFF) / 255.0,
+            alpha: 1.0
         )
     }
 }

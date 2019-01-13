@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-colored-browser-tabs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "cordova": {
     "id": "cordova-plugin-colored-browser-tabs",
     "platforms": [

@@ -97,6 +97,8 @@ public class ColoredBrowserTabs extends CordovaPlugin {
     CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
     if (!TextUtils.isEmpty(color)) {
       builder.setToolbarColor(Color.parseColor(color));
+    } else {
+      builder.setToolbarColor(Color.WHITE);
     }
     if (!TextUtils.isEmpty(animation)) {
       this.addAnimation(animation, builder);
