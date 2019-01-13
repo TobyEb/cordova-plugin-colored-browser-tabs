@@ -7,6 +7,10 @@ module.exports = {
       cordova.exec(successCallback, errorCallback, MODULE, "openTab", [
         { link: url, tabColor: color }
       ]);
+    } else {
+      cordova.exec(successCallback, errorCallback, MODULE, "openTab", [
+        { link: url }
+      ]);
     }
   },
 
