@@ -1,6 +1,24 @@
 {
   "name": "cordova-plugin-colored-browser-tabs",
-  "version": "0.0.2",
+  "version": "1.0.0",
+  "author": {
+    "name": "Tobias Ebert"
+  },
+  "license": "MIT License",
+  "keywords": [
+    "android",
+    "ios",
+    "chrome custom tabs",
+    "ChromeCustomTabs",
+    "safariviewcontroller",
+    "SFSafariViewController",
+    "browser tabs",
+    "in app browser"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TobyEb/cordova-plugin-colored-browser-tabs"
+  },
   "cordova": {
     "id": "cordova-plugin-colored-browser-tabs",
     "platforms": [
