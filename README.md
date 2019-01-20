@@ -19,8 +19,6 @@ $ ionic cordova plugin add cordova-plugin-colored-browser-tabs
 $ npm install --save @ionic-native/colored-browser-tabs
 ```
 
-**_the bridge will be available with the next ionic native release, the pull request was already merged_**
-
 2. [Add this plugin to your app's module](https://ionicframework.com/docs/native/#Add_Plugins_to_Your_App_Module)
 
 ## Supported Platforms
@@ -62,9 +60,10 @@ openTab(url: string, color?: string)
 ```
 
 opens Tab with specific url and color
+
 | Param | Type | Details|
-|----------------|----------------|----------------|
-| url | string | the url you want to open|
+|-------|------|--------|
+| url   | string | the url you want to open|
 | color | string | (Optional) the color you want the tab to have |
 
 ```
@@ -72,8 +71,9 @@ openTabWithAnimation(url: string, anim: string, color?: string)
 ```
 
 opens Tab with an animation
+
 | Param | Type | Details|
-|----------------|----------------|----------------|
+|-------|------|--------|
 | url | string | the url you want to open|
 | anim | string | the animation you want to show - for android you can chose between "slide_x", "slide_y" and "fade" - iOS will always show the default animation |
 | color | string | (Optional) the color you want the tab to have |
