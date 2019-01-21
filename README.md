@@ -37,20 +37,50 @@ import { ColoredBrowserTabs } from '@ionic-native/colored-browser-tabs';
 
   ...
   // Without animation and default color
-  this.browserTabs.openTab("https://www.google.com").subscribe();
+  this.browserTabs.openTab("https://www.google.com").subscribe(() => {
+    // do whatever you want to do on success
+  },
+  (error) => {
+    // handle the error callback here, e.g. open external default browser
+  });
   or
   // Without animation and custom color
-  this.browserTabs.openTab("https://www.google.com", "#ff0000").subscribe();
+  this.browserTabs.openTab("https://www.google.com", "#ff0000").subscribe(() => {
+    // do whatever you want to do on success
+  },
+  (error) => {
+    // handle the error callback here, e.g. open external default browser
+  });
 
   // With animation and default color
-  this.browserTabs.openTabWithAnimation("https://www.google.com", "slide_x").subscribe();
+  this.browserTabs.openTabWithAnimation("https://www.google.com", "slide_x").subscribe(() => {
+    // do whatever you want to do on success
+  },
+  (error) => {
+    // handle the error callback here, e.g. open external default browser
+  });
   or
-  this.browserTabs.openTabWithAnimation("https://www.google.com", "slide_y").subscribe();
+  this.browserTabs.openTabWithAnimation("https://www.google.com", "slide_y").subscribe(() => {
+    // do whatever you want to do on success
+  },
+  (error) => {
+    // handle the error callback here, e.g. open external default browser
+  });
   or
-  this.browserTabs.openTabWithAnimation("https://www.google.com", "fade").subscribe();
+  this.browserTabs.openTabWithAnimation("https://www.google.com", "fade").subscribe(() => {
+    // do whatever you want to do on success
+  },
+  (error) => {
+    // handle the error callback here, e.g. open external default browser
+  });
   or
   // With animation and custom color
-  this.browserTabs.openTabWithAnimation("https://www.google.com", "slide_x", "#ff0000").subscribe();
+  this.browserTabs.openTabWithAnimation("https://www.google.com", "slide_x", "#ff0000").subscribe(() => {
+    // do whatever you want to do on success
+  },
+  (error) => {
+    // handle the error callback here, e.g. open external default browser
+  });
 ```
 
 ## Instance Members
