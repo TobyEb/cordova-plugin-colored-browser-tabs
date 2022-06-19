@@ -1,3 +1,5 @@
+# ⚠️ Deprecated and not longer maintained, feel free to fork and make improvements
+
 # cordova-plugin-colored-browser-tabs
 
 Cordova Plugin to open Chrome Custom Tabs on Android or Safaris SFSafariViewController on iOS
